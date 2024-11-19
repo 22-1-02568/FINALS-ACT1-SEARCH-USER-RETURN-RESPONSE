@@ -46,7 +46,7 @@ form {
     border-radius: 10px;
 }
 
-input[type="text"], input[type="email"], input[type="password"] {
+input[type="text"], input[type="email"], input[type="password"], textarea {
     padding: 12px 10px;
     border: 2px solid #004080;
     border-radius: 8px;
@@ -129,6 +129,33 @@ footer {
     font-size: 14px;
 }
 
+/* Buttons */
+.btn {
+    color: #fff;
+    background-color: #004080;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 2px solid #004080;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #00264d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.delete-btn {
+    background-color: #e60000; /* Red */
+    border-color: #e60000;
+}
+
+.delete-btn:hover {
+    background-color: #cc0000; /* Darker red */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     form {
@@ -143,5 +170,13 @@ footer {
 
     h1 {
         font-size: 32px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+    }
+
+    .delete-btn {
+        padding: 8px 15px;
     }
 }

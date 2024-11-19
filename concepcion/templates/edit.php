@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h1>Edit Applicant</h1>
 
     <?php if (isset($error)): ?>
-        <p style="color: red;"><?= htmlspecialchars($error) ?></p>
+        <p><?= htmlspecialchars($error) ?></p>
     <?php endif; ?>
 
     <form method="post" action="">
@@ -75,5 +75,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <a href="../index.php" class="cancel-btn">Cancel</a>
     </form>
+
 </body>
 </html>

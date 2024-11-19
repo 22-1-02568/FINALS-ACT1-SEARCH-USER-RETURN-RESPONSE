@@ -12,7 +12,7 @@ $applicants = readApplicants()['querySet'];
 </head>
 <body>
     <h1>Applicants List</h1>
-    <a href="create.php">Add New Applicant</a>
+    <a href="create.php" class="btn">Add New Applicant</a>
     <table>
         <thead>
             <tr>
@@ -33,16 +33,17 @@ $applicants = readApplicants()['querySet'];
                     <td><?= htmlspecialchars($applicant['address']) ?></td>
                     <td><?= htmlspecialchars($applicant['qualifications']) ?></td>
                     <td>
-                        <a href="edit.php?id=<?= $applicant['id'] ?>">Edit</a>
+                        <a href="edit.php?id=<?= $applicant['id'] ?>" class="btn">Edit</a>
                         <form method="post" action="../handleForms.php" style="display:inline;">
                             <input type="hidden" name="action" value="delete">
                             <input type="hidden" name="id" value="<?= $applicant['id'] ?>">
-                            <button type="submit" onclick="return confirm('Are you sure?')">Delete</button>
+                            <button type="submit" class="btn delete-btn" onclick="return confirm('Are you sure?')">Delete</button>
                         </form>
                     </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
+
 </body>
 </html>
